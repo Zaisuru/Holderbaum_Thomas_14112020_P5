@@ -1,0 +1,20 @@
+// Déclaration des variables
+
+@import "../Utils/variables";
+
+.card-horizontal{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  .img-square-wrapper{
+    width: 50%;
+  }
+  .card-body-product{
+    display: flex!important;
+    flex-direction: column;
+    .card-select{
+      display: flex;
+    }
+
+  }
+}

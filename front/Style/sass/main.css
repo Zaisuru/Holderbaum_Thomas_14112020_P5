@@ -1,0 +1,40 @@
+#logoOrinoco {
+  width: 30%;
+}
+
+.btn-command {
+  margin: 15px 0 15px 0;
+  background: linear-gradient(#9A61DB, 80%, #D3874F);
+  color: whitesmoke;
+}
+
+#cardIndex-Title {
+  margin: 15px 0 15px 0;
+}
+
+.cardIndex {
+  width: 300px;
+  background: yellow;
+}
+
+.card-horizontal {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card-horizontal .img-square-wrapper {
+  width: 50%;
+}
+.card-horizontal .card-body-product {
+  display: flex !important;
+  flex-direction: column;
+}
+.card-horizontal .card-body-product .card-select {
+  display: flex;
+}
+
+body {
+  background-color: #F3E9F1;
+}
+
+/*# sourceMappingURL=main.css.map */

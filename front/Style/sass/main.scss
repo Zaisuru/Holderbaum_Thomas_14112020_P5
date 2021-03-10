@@ -1,5 +1,14 @@
-// Déclaration des variables
+// Déclaration des Utils
+@import "Utils/variables";
 
+// Déclaration des Layout
+@import "Layout/header";
 
-// Déclaration cardIndex
+// Déclaration Components
+@import "Components/btn";
 @import "Components/cardIndex";
+@import "Components/cardProduct";
+
+body{
+  background-color: $fontColor;
+}

@@ -2,33 +2,37 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
     <title>Orinoco - Accueil</title>
 
     <!-- Déclaration des CDNs -->
+    <link rel="preload" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
     <!-- Déclaration Scripts -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Déclaration fichier de style -->
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" typ="text/css" href="Style/css/main.css">
 
 </head>
 <body>
 <div class="container">
     <header>
         <nav class="nav navbar-expand-lg navbar-light">
-            <a href="#" class="navbar-brand"></a>
+            <a href="#" class="navbar-brand">
+                <img src="Picture/Orinoco_logo.PNG" alt="logo Orinoco" id="logoOrinoco">
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Accueil</a>
                     </li>
-
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Panier</a>
                     </li>
@@ -37,28 +41,28 @@
         </nav>
     </header>
     <main>
+        <h2 id="cardIndex-Title">Notre sélection</h2>
         <div class="row">
-            <div class="col-lg-6">
-                <h2>Notre sélection</h2>
-                <div class="card-deck">
+                <div class="col-lg-4">
                     <div class="card">
-                        <img src="#" class="card-img-top" alt="Image">
-                        <div class="card-body">
-                            <h3 class="card-title">Teddy Bear</h3>
-                            <p class="card-text">ceci est une description</p>
-                        </div>
-                    </div>
-
-
-                    <div class="card">
-                        <img src="#" class="card-img-top" alt="Image">
+                        <a href="OtherPages/product.html"><img src="../back/images/teddy_1.jpg" class="card-img-top" alt="Image"></a>
                         <div class="card-body">
                             <h3 class="card-title">Teddy Bear</h3>
                             <p class="card-text">ceci est une description</p>
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <div class="col-lg-4">
+                    <div class="card">
+                        <a href="OtherPages/product.html"><img src="../back/images/teddy_1.jpg" class="card-img-top" alt="Image"></a>
+                        <div class="card-body">
+                            <h3 class="card-title">Teddy Bear</h3>
+                            <p class="card-text">ceci est une description</p>
+                        </div>
+                    </div>
+                </div>
+
         </div>
 
     </main>

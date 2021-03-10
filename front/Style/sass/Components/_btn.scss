@@ -1,0 +1,9 @@
+// Déclaration des variables
+
+@import "../Utils/variables";
+
+.btn-command{
+  margin: 15px 0 15px 0;
+  background: linear-gradient($secondaryColor,80%, $primaryColor);
+  color: whitesmoke;
+}
