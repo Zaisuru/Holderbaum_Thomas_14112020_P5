@@ -1,0 +1,19 @@
+{
+  "name": "openp5_bs",
+  "version": "1.0.0",
+  "description": "Project 5 with BootStrap&Sass",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch front/Style/sass/main.scss:front/Style/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zaisuru/Projet5_OpenClassrooms.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zaisuru/Projet5_OpenClassrooms/issues"
+  },
+  "homepage": "https://github.com/Zaisuru/Projet5_OpenClassrooms#readme"
+}
