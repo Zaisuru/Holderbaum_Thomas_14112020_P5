@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Orinoco - Accueil</title>
+
+    <!-- Déclaration des CDNs -->
+    <link rel="preload" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+
+    <!-- Déclaration Scripts -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Déclaration fichier de style -->
+    <link rel="stylesheet" type="text/css" href="../Style/css/main.css">
+
+</head>
+<body>
+<div class="container">
+    <header>
+        <nav class="nav navbar-expand-lg navbar-light">
+            <a href="#" class="navbar-brand">
+                <img src="../Picture/Orinoco_logo.PNG" alt="logo Orinoco" id="logoOrinoco">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Panier</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-title">
+                        <h2>Vos coordonnées</h2>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="lastName">Votre nom</label>
+                                    <input id="lastName" type="text" class="form-control" placeholder="Doe">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="firstName">Votre prénom</label>
+                                    <input id="firstName" type="text" class="form-control" placeholder="John">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="phone">Votre téléphone</label>
+                                    <input id="phone" type="phone" class="form-control" placeholder="XX-XX-XX-XX-XX">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="mail">Votre email</label>
+                                    <input id="mail" type="email" class="form-control" placeholder="john.doe@domain.com">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="factAdress">Adresse de facturation</label>
+                                    <input id="factAdress" type="text" class="form-control" placeholder="">
+                                </div>
+                                <div class="form-group col-md-12">
+                                    <label for="LivrAdress">Adresse de Livraison</label>
+                                    <input id="LivrAdress" type="text" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-title">
+                        <h2>Votre panier</h2>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <td scope="col">Désignation</td>
+                                    <td scope="col">Quantité</td>
+                                    <td scope="col">Total</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Teddy 1</td>
+                                    <td>
+                                        <select>
+                                            <option>1</option>
+                                        </select>
+                                    </td>
+                                    <td>20</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+                <button class="btn btn-confirmation">Confirmation</button>
+        </div>
+    </main>
+    <footer></footer>
+</div>
+
+</body>
+</html>

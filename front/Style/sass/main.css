@@ -2,9 +2,22 @@
   width: 30%;
 }
 
+#msgConfirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .btn-command {
   margin: 15px 0 15px 0;
   background: linear-gradient(#9A61DB, 80%, #D3874F);
+  color: whitesmoke;
+}
+
+.btn-confirmation {
+  background: linear-gradient(#9A61DB, 80%, #D3874F);
+  width: 50%;
   color: whitesmoke;
 }
 
