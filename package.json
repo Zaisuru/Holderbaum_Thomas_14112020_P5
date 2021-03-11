@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Zaisuru/Projet5_OpenClassrooms/issues"
   },
-  "homepage": "https://github.com/Zaisuru/Projet5_OpenClassrooms#readme"
+  "homepage": "https://github.com/Zaisuru/Projet5_OpenClassrooms#readme",
+  "dependencies": {
+    "node": "^15.10.0",
+    "server": "^1.0.32"
+  }
 }

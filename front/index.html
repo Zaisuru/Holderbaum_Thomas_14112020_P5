@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
+    <meta name="description" content="Vente en ligne d'ours en peluche">
     <title>Orinoco - Accueil</title>
 
     <!-- Déclaration des CDNs -->
-    <link rel="preload" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
 
     <!-- Déclaration Scripts -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts/index.js"></script>
 
     <!-- Déclaration fichier de style -->
-    <link rel="stylesheet" typ="text/css" href="Style/css/main.css">
+    <link rel="stylesheet" type="text/css" href="Style/css/main.css">
 
 </head>
 <body>
@@ -35,8 +35,11 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Accueil</a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="#">Panier</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -44,29 +47,8 @@
     </header>
     <main>
         <h2 id="cardIndex-Title">Notre sélection</h2>
-        <div class="row">
-                <div class="col-lg-4">
-                    <div class="card">
-                        <a href="OtherPages/product.html"><img src="../back/images/teddy_1.jpg" class="card-img-top" alt="Image"></a>
-                        <div class="card-body">
-                            <h3 class="card-title">Teddy Bear</h3>
-                            <p class="card-text">ceci est une description</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="card">
-                        <a href="OtherPages/product.html"><img src="../back/images/teddy_1.jpg" class="card-img-top" alt="Image"></a>
-                        <div class="card-body">
-                            <h3 class="card-title">Teddy Bear</h3>
-                            <p class="card-text">ceci est une description</p>
-                        </div>
-                    </div>
-                </div>
-
+        <div class="row" id="cardIndex-container">
         </div>
-
     </main>
     <footer></footer>
 </div>

@@ -1,6 +1,12 @@
 //Déclaration des variables
 @import "../Utils/variables";
-
-#logoOrinoco{
-  width: 30%;
+header{
+  margin: 0 0 100px 0;
+  #logoOrinoco{
+    width: 40%;
+  }
+  .nav-item{
+    font-size: 20px;
+    padding: 0 10px 0 10px;
+  }
 }
