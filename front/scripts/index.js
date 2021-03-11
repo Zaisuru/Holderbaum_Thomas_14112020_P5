@@ -23,14 +23,15 @@ function getArticle() {
 }
 function displayArticles(teddySchema){
     document.getElementById("cardIndex-container").innerHTML +=
-        '<div class="col-lg-4""> ' +
+        '<div class="col-lg-4"> ' +
             '<div class="card"> ' +
                 '<a href="OtherPages/product.html">' +
-                    '<img src="../back/images/${teddySchema.imageUrl}" class="card-img-top" alt="Image">' +
+                    '<img src="../back/images/teddy_1.jpg" class="card-img-top" alt="Image">' +
                 '</a> ' +
                 '<div class="card-body"> ' +
-                    '<h3 class="card-title">Teddy Bear</h3> ' +
-                    '<p class="card-text">ceci est une description</p> ' +
+                    '<h3 class="card-title">'+teddySchema.name+'</h3> ' +
+                    '<p class="card-text">'+teddySchema.description+'</p> ' +
+                    '<h4 class="card-text">'+teddySchema.price+'</h4>'+
                 '</div> ' +
             '</div>' +
         '</div>'
