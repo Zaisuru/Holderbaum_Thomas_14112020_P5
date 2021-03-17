@@ -8,4 +8,9 @@
 }
 .card{
   margin: 25px 0 25px 0!important;
+  .indexImg{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
 }
