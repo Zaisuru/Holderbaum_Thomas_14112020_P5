@@ -1,5 +1,4 @@
 //function pour affichage des teddy dans le main
-
 function displayTeddies(teddy){
     // récupération du container parent
     let container = document.getElementById("cardIndex-container");
@@ -56,10 +55,9 @@ function displayProducts(teddy){
     let containerColors = document.createElement("div");
     let colorsTitle = document.createElement("h3");
     let colorsSelect = document.createElement("select");
-    let colorsSelectOption = document.createElement("option");
     let containerQte = document.createElement("div");
+    let qteTitle = document.createElement("p");
     let qteSelect = document.createElement("select");
-    let qteSelectOption = document.createElement("option");
     let btnAddShip = document.createElement("btn");
 
     // Ajout des class css
@@ -67,7 +65,7 @@ function displayProducts(teddy){
     containerCard.setAttribute("class","card");
     cardHorizontal.setAttribute("class","card-horizontal");
     containerImg.setAttribute("class","img-square-wrapper");
-    imgTeddy.setAttribute("class","card-img-top card-product");
+    imgTeddy.setAttribute("class","card-img-top card-body-product");
     imgTeddy.setAttribute("src",teddy.imageUrl);
     imgTeddy.setAttribute("alt","Image ourson en peluche fait main");
     cardBody.setAttribute("class","card-body");
@@ -77,23 +75,16 @@ function displayProducts(teddy){
     //X.setAttribute("class","");
     qteSelect.setAttribute("class","selectQte");
     btnAddShip.setAttribute("class","btn btn-command");
-    btnAddShip.setAttribute("value","Ajouter votre sélection");
 
     //récupération éléments API
     bodyTitle.textContent = teddy.name;
     bodyDescription.textContent = teddy.description;
     bodyPrice.textContent = teddy.price;
-    for(let i=0; i < teddy.colors.length; i++){
-        colorsSelectOption.textContent = teddy.colors[0];
-    }
 
     //définition des autres champs
-    let qteMax = 10 
-    for(let i = 1; i < qteMax; i++){
-        qteSelectOption.textContent = i ;
-    }
-    btnAddShip.textContent = "Ajouter votre sélection"
-
+    colorsTitle.textContent = "Choisir votre couleur";
+    qteTitle.textContent = "Quantité";
+    btnAddShip.textContent = "Ajouter votre sélection";
 
     // Ajout des éléments depuis dans le html
     container.appendChild(containerCol);
@@ -106,11 +97,43 @@ function displayProducts(teddy){
     cardBody.appendChild(bodyDescription);
     cardBody.appendChild(bodyPrice);
     cardBody.appendChild(containerColors);
+    containerColors.appendChild(colorsTitle);
     containerColors.appendChild(colorsSelect);
-    colorsSelect.appendChild(colorsSelectOption);
+    cardBody.appendChild(qteTitle);
     cardBody.appendChild(containerQte);
     containerQte.appendChild(qteSelect);
-    qteSelect.appendChild(qteSelectOption);
     cardBody.appendChild(btnAddShip);
 
+    //ajout des colors
+    for(let i = 0 ; i < teddy.colors.length; i++){
+        let colorsSelectOption = document.createElement("option");
+        colorsSelectOption.textContent = teddy.colors[i];
+        colorsSelect.appendChild(colorsSelectOption);
+    }
+    // Ajout des qte
+    let qteMax = 10
+    for(let i = 1; i < qteMax; i++){
+        let qteSelectOption = document.createElement("option");
+        qteSelectOption.textContent = i;
+        qteSelect.appendChild(qteSelectOption);
+    }
+}
+
+//affichage du panier
+function displayShip(){
+    //Récupération du container parent
+    let container = document.getElementById("containerShip");
+
+    //déclaration du formulaire
+    let containerCol = document.createElement("div");
+    let cardContainer = document.createElement("div");
+    let cardTitle = document.createElement("div");
+    let titleForm = document.createElement("h2");
+    let cardBody = document.createElement("div");
+    let bodyForm = document.createElement("form");
+    let formRow = document.createElement("div");
+    let rowGroup = document.createElement("div");
+    let groupLabel = document.createElement("label");
+    let labelInput = document.createElement("input");
+    //déclaration du panier
 }
