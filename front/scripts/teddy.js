@@ -140,4 +140,15 @@ function displayShip(){
     let labelInput = document.createElement("input");
 
     //déclaration du panier
+
+    // récupération du localStorage
+
+    // Affichage des éléments
+
+    // Création des class css
+
+    // Validation du panier
+        // Création n° de fact
+        // sup du localStorage
+        // alert de lconfirmation
 }

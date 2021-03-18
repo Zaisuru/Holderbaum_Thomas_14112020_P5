@@ -10,9 +10,6 @@ onload = function(){
                 displayProducts(teddy);
         })
 }
-
-// localStorage
-
 // Récupération du submit
 let addShipProduct = document.getElementById("addShip");
 
