@@ -51,12 +51,12 @@ function displayProducts(teddy){
     let cardBody = document.createElement("div");
     let bodyTitle = document.createElement("h2");
     let bodyDescription = document.createElement("p");
-    let bodyPrice = document.createElement("p");
+    let bodyPrice = document.createElement("h3");
     let containerColors = document.createElement("div");
-    let colorsTitle = document.createElement("h3");
+    let colorsTitle = document.createElement("h4");
     let colorsSelect = document.createElement("select");
     let containerQte = document.createElement("div");
-    let qteTitle = document.createElement("p");
+    let qteTitle = document.createElement("h4");
     let qteSelect = document.createElement("select");
     let btnAddShip = document.createElement("btn");
 
@@ -65,21 +65,23 @@ function displayProducts(teddy){
     containerCard.setAttribute("class","card");
     cardHorizontal.setAttribute("class","card-horizontal");
     containerImg.setAttribute("class","img-square-wrapper");
-    imgTeddy.setAttribute("class","card-img-top card-body-product");
+    imgTeddy.setAttribute("class","card-img-top");
     imgTeddy.setAttribute("src",teddy.imageUrl);
     imgTeddy.setAttribute("alt","Image ourson en peluche fait main");
-    cardBody.setAttribute("class","card-body");
+    cardBody.setAttribute("class","card-body card-body-product");
     bodyTitle.setAttribute("class","body-title");
     bodyDescription.setAttribute("class","body-text");
     containerColors.setAttribute("class","card-select");
-    //X.setAttribute("class","");
+    containerQte.setAttribute("class","card-select");
     qteSelect.setAttribute("class","selectQte");
     btnAddShip.setAttribute("class","btn btn-command");
+    btnAddShip.setAttribute("id","addShip");
+    btnAddShip.setAttribute("type","submit");
 
     //récupération éléments API
     bodyTitle.textContent = teddy.name;
     bodyDescription.textContent = teddy.description;
-    bodyPrice.textContent = teddy.price;
+    bodyPrice.textContent = teddy.price + " €";
 
     //définition des autres champs
     colorsTitle.textContent = "Choisir votre couleur";
@@ -92,7 +94,7 @@ function displayProducts(teddy){
     containerCard.appendChild(cardHorizontal);
     cardHorizontal.appendChild(containerImg);
     containerImg.appendChild(imgTeddy);
-    containerImg.appendChild(cardBody);
+    cardHorizontal.appendChild(cardBody);
     cardBody.appendChild(bodyTitle);
     cardBody.appendChild(bodyDescription);
     cardBody.appendChild(bodyPrice);
@@ -101,6 +103,7 @@ function displayProducts(teddy){
     containerColors.appendChild(colorsSelect);
     cardBody.appendChild(qteTitle);
     cardBody.appendChild(containerQte);
+    containerQte.appendChild(qteTitle);
     containerQte.appendChild(qteSelect);
     cardBody.appendChild(btnAddShip);
 
@@ -135,5 +138,6 @@ function displayShip(){
     let rowGroup = document.createElement("div");
     let groupLabel = document.createElement("label");
     let labelInput = document.createElement("input");
+
     //déclaration du panier
 }

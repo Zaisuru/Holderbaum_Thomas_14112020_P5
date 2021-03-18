@@ -10,8 +10,10 @@
     width: 50%;
   }
   .card-body-product{
+    width: 30%;
     display: flex!important;
     flex-direction: column;
+    flex-wrap: wrap;
     .card-select{
       display: flex;
       justify-content: space-between;

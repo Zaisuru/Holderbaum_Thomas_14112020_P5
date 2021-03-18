@@ -59,8 +59,10 @@ header .nav-item {
   width: 50%;
 }
 .card-horizontal .card-body-product {
+  width: 30%;
   display: flex !important;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 .card-horizontal .card-body-product .card-select {
   display: flex;
