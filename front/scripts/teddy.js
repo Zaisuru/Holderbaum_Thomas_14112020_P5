@@ -58,7 +58,7 @@ function displayProducts(teddy){
     let containerQte = document.createElement("div");
     let qteTitle = document.createElement("h4");
     let qteSelect = document.createElement("select");
-    let btnAddShip = document.createElement("btn");
+    let btnAddShip = document.createElement("button");
 
     // Ajout des class css
     containerCol.setAttribute("class","col-12");
@@ -77,6 +77,7 @@ function displayProducts(teddy){
     btnAddShip.setAttribute("class","btn btn-command");
     btnAddShip.setAttribute("id","addShip");
     btnAddShip.setAttribute("type","submit");
+    btnAddShip.setAttribute("href","ship.html");
 
     //récupération éléments API
     bodyTitle.textContent = teddy.name;
@@ -120,6 +121,16 @@ function displayProducts(teddy){
         qteSelectOption.textContent = i;
         qteSelect.appendChild(qteSelectOption);
     }
+
+    // Récupération élément dans le local storage
+    document.getElementById("addShip").addEventListener("click", event => {
+        console.log("Hello toi");
+        localStorage.setItem('name', teddy.name);
+        localStorage.setItem('price', teddy.price);
+        localStorage.setItem('colors', teddy.colors);
+        // localStorage.setItem('quantity', qteSelectOption);
+        console.log(localStorage.getItem('name'));
+    })
 }
 
 //affichage du panier
@@ -127,26 +138,170 @@ function displayShip(){
     //Récupération du container parent
     let container = document.getElementById("containerShip");
 
+    // récupération du localStorage
+    let teddyStorage = localStorage.getItem('name');
+    let priceStorage = localStorage.getItem('price');
+
+    // déclaration du bouton
+    let btnOrder = document.createElement("button");
+
     //déclaration du formulaire
-    let containerCol = document.createElement("div");
+    let containerColForm = document.createElement("div");
     let cardContainer = document.createElement("div");
     let cardTitle = document.createElement("div");
     let titleForm = document.createElement("h2");
     let cardBody = document.createElement("div");
     let bodyForm = document.createElement("form");
-    let formRow = document.createElement("div");
+
+    let formRowName = document.createElement("div");
     let rowGroup = document.createElement("div");
-    let groupLabel = document.createElement("label");
-    let labelInput = document.createElement("input");
+    let labelFirstName = document.createElement("label");
+    let inputFirstName = document.createElement("input");
+    let labelLastName = document.createElement("label");
+    let inputLastName = document.createElement("input");
+
+    let formRowEmail = document.createElement("div");
+    let rowGroupEmail = document.createElement("div");
+    let labelEmail = document.createElement("label");
+    let inputEmail = document.createElement("input");
+
+    let formRowAdr = document.createElement("div");
+    let rowGroupAdr = document.createElement("div");
+    let labelAddressFact = document.createElement("label");
+    let inputAddressFact = document.createElement("input");
+    let labelAddressLiv = document.createElement("label");
+    let inputAddressLiv = document.createElement("input");
+
 
     //déclaration du panier
+    let containerColShip = document.createElement("div");
+    let cardContainerShip = document.createElement("div");
+    let cardTitleShip = document.createElement("div");
+    let titleShip = document.createElement("h2");
+    let cardBodyShip = document.createElement("div");
+    let bodyTable = document.createElement("table");
+    let tableThead = document.createElement("thead");
+    let theadTR = document.createElement("tr");
+    let tableTbody = document.createElement("tbody");
+    let tbodyTR = document.createElement("tr");
+
 
     // récupération du localStorage
 
-    // Affichage des éléments
 
     // Création des class css
+        //déclaration du formulaire
+    containerColForm.setAttribute("class", "col-lg-6");
+    cardContainer.setAttribute("class", "card");
+    cardTitle.setAttribute("class","card-title");
+    cardBody.setAttribute("class","card-body");
+    bodyForm.setAttribute("class","form");
+    formRowName.setAttribute("class","form-row");
+    rowGroup.setAttribute("class","form-group col-md-6");
 
+    labelFirstName.setAttribute("for", "inputForm");
+    labelFirstName.setAttribute("value","Votre nom");
+    inputFirstName.setAttribute("type", "text");
+    inputFirstName.setAttribute("class","inputForm");
+
+    labelLastName.setAttribute("for", "inputForm");
+    labelLastName.setAttribute("value","Votre nom");
+    inputLastName.setAttribute("type", "text");
+    inputLastName.setAttribute("class","inputForm");
+
+
+    formRowEmail.setAttribute("class","form-row");
+    rowGroupEmail.setAttribute("class","form-group col-md-6");
+    labelEmail.setAttribute("for", "inputForm");
+    labelEmail.setAttribute("value","Votre nom");
+    inputEmail.setAttribute("type", "text");
+    inputEmail.setAttribute("class","inputForm");
+
+
+    formRowAdr.setAttribute("class","form-row");
+    rowGroupAdr.setAttribute("class","form-group col-md-6");
+
+    labelAddressFact.setAttribute("for", "inputForm");
+    labelAddressFact.setAttribute("value","Votre nom");
+    inputAddressFact.setAttribute("type", "text");
+    inputAddressFact.setAttribute("class","inputForm");
+
+    labelAddressLiv.setAttribute("for", "inputForm");
+    labelAddressLiv.setAttribute("value","Votre nom");
+    inputAddressLiv.setAttribute("type", "text");
+    inputAddressLiv.setAttribute("class","inputForm");
+
+
+//déclaration du panier
+    containerColShip.setAttribute("class", "col-lg-6");
+    cardContainerShip.setAttribute("class", "card");
+    cardTitleShip.setAttribute("class","card-title");
+    cardBodyShip.setAttribute("class","card-body");
+    bodyTable.setAttribute("class","table table-striped");
+    tableThead.setAttribute("class","thead-dark");
+
+
+    //Déclaration du contenu
+        //contenu du formulaire
+    labelFirstName.textContent = 'Nom';
+    labelLastName.textContent = "Prénom";
+
+    labelEmail.textContent = "Email";
+
+    labelAddressFact.textContent = "Adresse de facturation";
+    labelAddressLiv.textContent = "Adresse de livraison";
+
+        // contenu du panier
+    titleShip.textContent = 'Votre panier';
+
+    //Affichage des éléments
+        //affichage du formulaire
+    container.appendChild(containerColForm);
+    containerColForm.appendChild(cardContainer);
+    cardContainer.appendChild(cardTitle);
+    cardContainer.appendChild(cardBody);
+    cardBody.appendChild(bodyForm);
+
+    bodyForm.appendChild(formRowName);
+    formRowName.appendChild(rowGroup);
+    rowGroup.appendChild(labelFirstName);
+    rowGroup.appendChild(inputFirstName);
+    formRowName.appendChild(rowGroup);
+    rowGroup.appendChild(labelLastName);
+    rowGroup.appendChild(inputLastName);
+
+    bodyForm.appendChild(formRowEmail);
+    formRowEmail.appendChild(rowGroupEmail);
+    rowGroupEmail.appendChild(labelEmail);
+    rowGroupEmail.appendChild(inputEmail);
+
+    bodyForm.appendChild(formRowAdr);
+    formRowAdr.appendChild(rowGroupAdr);
+    rowGroupAdr.appendChild(labelAddressFact);
+    rowGroupAdr.appendChild(inputAddressFact);
+
+    rowGroupAdr.appendChild(labelAddressLiv);
+    rowGroupAdr.appendChild(inputAddressLiv);
+
+        //affichage du panier
+    container.appendChild(containerColShip);
+    containerColShip.appendChild(cardContainerShip);
+    cardContainerShip.appendChild(cardTitleShip);
+    cardContainerShip.appendChild(cardBodyShip);
+    cardBodyShip.appendChild(bodyTable);
+    bodyTable.appendChild(tableThead);
+    tableThead.appendChild(theadTR);
+    for (let i = 0; i < 4; i++){
+        let theadTH = document.createElement("th");
+        theadTH.textContent = "text";
+        theadTR.appendChild(theadTH);
+    }
+
+                // for(let i = 0; i < 4; i++){
+                //     let bodyTableColumn = document.createElement("td");
+                //     bodyTableColumn.textContent = 'Test';
+                //     bodyTable.appendChild(bodyTableColumn);
+                // }
     // Validation du panier
         // Création n° de fact
         // sup du localStorage

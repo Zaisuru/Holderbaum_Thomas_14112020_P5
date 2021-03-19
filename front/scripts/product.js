@@ -11,14 +11,6 @@ onload = function(){
         })
 }
 // Récupération du submit
-let addShipProduct = document.getElementById("addShip");
-
-console.log(addShipProduct);
-
-addShipProduct.addEventListener("click",event =>{
-    console.log("Hello toi");
-});
-
 
 
 
