@@ -24,7 +24,7 @@ function displayTeddies(teddy){
     //Ajout des éléments provenant de l'API
     bodyTitle.textContent = teddy.name;
     bodyDescription.textContent=teddy.description;
-    bodyPrice.textContent=teddy.price;
+    bodyPrice.textContent=teddy.price +' €';
 
     //Affichage des éléments
     container.appendChild(containerCol);
@@ -57,7 +57,9 @@ function displayProducts(teddy){
     let colorsSelect = document.createElement("select");
     let containerQte = document.createElement("div");
     let qteTitle = document.createElement("h4");
-    let qteSelect = document.createElement("select");
+    let qteSelectAdd = document.createElement("button");
+    let qteSelectQte = document.createElement("input");
+    let qteSelectDel = document.createElement("button");
     let btnAddShip = document.createElement("button");
 
     // Ajout des class css
@@ -73,16 +75,24 @@ function displayProducts(teddy){
     bodyDescription.setAttribute("class","body-text");
     containerColors.setAttribute("class","card-select");
     containerQte.setAttribute("class","card-select");
-    qteSelect.setAttribute("class","selectQte");
+    qteSelectAdd.setAttribute("id","selectQteAdd");
+    qteSelectAdd.setAttribute("class","btn btn-primary");
+    qteSelectQte.setAttribute("id","qteSelectQte");
+    qteSelectQte.setAttribute("type","text");
+    qteSelectQte.setAttribute("placeholder","1");
+    qteSelectDel.setAttribute("id", "selectQteDel");
+    qteSelectDel.setAttribute("class", "btn btn-danger");
     btnAddShip.setAttribute("class","btn btn-command");
     btnAddShip.setAttribute("id","addShip");
     btnAddShip.setAttribute("type","submit");
-    btnAddShip.setAttribute("href","ship.html");
+    btnAddShip.setAttribute("onclick","window.location.href='ship.html'");
 
     //récupération éléments API
     bodyTitle.textContent = teddy.name;
     bodyDescription.textContent = teddy.description;
     bodyPrice.textContent = teddy.price + " €";
+    qteSelectAdd.textContent= "+";
+    qteSelectDel.textContent="-";
 
     //définition des autres champs
     colorsTitle.textContent = "Choisir votre couleur";
@@ -105,7 +115,9 @@ function displayProducts(teddy){
     cardBody.appendChild(qteTitle);
     cardBody.appendChild(containerQte);
     containerQte.appendChild(qteTitle);
-    containerQte.appendChild(qteSelect);
+    containerQte.appendChild(qteSelectAdd);
+    containerQte.appendChild(qteSelectQte);
+    containerQte.appendChild(qteSelectDel);
     cardBody.appendChild(btnAddShip);
 
     //ajout des colors
@@ -115,21 +127,14 @@ function displayProducts(teddy){
         colorsSelect.appendChild(colorsSelectOption);
     }
     // Ajout des qte
-    let qteMax = 10
-    for(let i = 1; i < qteMax; i++){
-        let qteSelectOption = document.createElement("option");
-        qteSelectOption.textContent = i;
-        qteSelect.appendChild(qteSelectOption);
-    }
 
     // Récupération élément dans le local storage
     document.getElementById("addShip").addEventListener("click", event => {
-        console.log("Hello toi");
         localStorage.setItem('name', teddy.name);
         localStorage.setItem('price', teddy.price);
-        localStorage.setItem('colors', teddy.colors);
-        // localStorage.setItem('quantity', qteSelectOption);
-        console.log(localStorage.getItem('name'));
+        localStorage.setItem('colors', teddy.colors.value);
+        localStorage.setItem('quantity', document.getElementById("qteSelectQte").value);
+        event.preventDefault();
     })
 }
 
@@ -142,37 +147,6 @@ function displayShip(){
     let teddyStorage = localStorage.getItem('name');
     let priceStorage = localStorage.getItem('price');
 
-    // déclaration du bouton
-    let btnOrder = document.createElement("button");
-
-    //déclaration du formulaire
-    let containerColForm = document.createElement("div");
-    let cardContainer = document.createElement("div");
-    let cardTitle = document.createElement("div");
-    let titleForm = document.createElement("h2");
-    let cardBody = document.createElement("div");
-    let bodyForm = document.createElement("form");
-
-    let formRowName = document.createElement("div");
-    let rowGroup = document.createElement("div");
-    let labelFirstName = document.createElement("label");
-    let inputFirstName = document.createElement("input");
-    let labelLastName = document.createElement("label");
-    let inputLastName = document.createElement("input");
-
-    let formRowEmail = document.createElement("div");
-    let rowGroupEmail = document.createElement("div");
-    let labelEmail = document.createElement("label");
-    let inputEmail = document.createElement("input");
-
-    let formRowAdr = document.createElement("div");
-    let rowGroupAdr = document.createElement("div");
-    let labelAddressFact = document.createElement("label");
-    let inputAddressFact = document.createElement("input");
-    let labelAddressLiv = document.createElement("label");
-    let inputAddressLiv = document.createElement("input");
-
-
     //déclaration du panier
     let containerColShip = document.createElement("div");
     let cardContainerShip = document.createElement("div");
@@ -184,52 +158,7 @@ function displayShip(){
     let theadTR = document.createElement("tr");
     let tableTbody = document.createElement("tbody");
     let tbodyTR = document.createElement("tr");
-
-
-    // récupération du localStorage
-
-
-    // Création des class css
-        //déclaration du formulaire
-    containerColForm.setAttribute("class", "col-lg-6");
-    cardContainer.setAttribute("class", "card");
-    cardTitle.setAttribute("class","card-title");
-    cardBody.setAttribute("class","card-body");
-    bodyForm.setAttribute("class","form");
-    formRowName.setAttribute("class","form-row");
-    rowGroup.setAttribute("class","form-group col-md-6");
-
-    labelFirstName.setAttribute("for", "inputForm");
-    labelFirstName.setAttribute("value","Votre nom");
-    inputFirstName.setAttribute("type", "text");
-    inputFirstName.setAttribute("class","inputForm");
-
-    labelLastName.setAttribute("for", "inputForm");
-    labelLastName.setAttribute("value","Votre nom");
-    inputLastName.setAttribute("type", "text");
-    inputLastName.setAttribute("class","inputForm");
-
-
-    formRowEmail.setAttribute("class","form-row");
-    rowGroupEmail.setAttribute("class","form-group col-md-6");
-    labelEmail.setAttribute("for", "inputForm");
-    labelEmail.setAttribute("value","Votre nom");
-    inputEmail.setAttribute("type", "text");
-    inputEmail.setAttribute("class","inputForm");
-
-
-    formRowAdr.setAttribute("class","form-row");
-    rowGroupAdr.setAttribute("class","form-group col-md-6");
-
-    labelAddressFact.setAttribute("for", "inputForm");
-    labelAddressFact.setAttribute("value","Votre nom");
-    inputAddressFact.setAttribute("type", "text");
-    inputAddressFact.setAttribute("class","inputForm");
-
-    labelAddressLiv.setAttribute("for", "inputForm");
-    labelAddressLiv.setAttribute("value","Votre nom");
-    inputAddressLiv.setAttribute("type", "text");
-    inputAddressLiv.setAttribute("class","inputForm");
+    let btnCommand = document.createElement("button");
 
 
 //déclaration du panier
@@ -239,50 +168,16 @@ function displayShip(){
     cardBodyShip.setAttribute("class","card-body");
     bodyTable.setAttribute("class","table table-striped");
     tableThead.setAttribute("class","thead-dark");
+    btnCommand.setAttribute("class", "btn btn-command");
 
 
     //Déclaration du contenu
-        //contenu du formulaire
-    labelFirstName.textContent = 'Nom';
-    labelLastName.textContent = "Prénom";
-
-    labelEmail.textContent = "Email";
-
-    labelAddressFact.textContent = "Adresse de facturation";
-    labelAddressLiv.textContent = "Adresse de livraison";
 
         // contenu du panier
     titleShip.textContent = 'Votre panier';
+    btnCommand.textContent = "Commander ! "
 
     //Affichage des éléments
-        //affichage du formulaire
-    container.appendChild(containerColForm);
-    containerColForm.appendChild(cardContainer);
-    cardContainer.appendChild(cardTitle);
-    cardContainer.appendChild(cardBody);
-    cardBody.appendChild(bodyForm);
-
-    bodyForm.appendChild(formRowName);
-    formRowName.appendChild(rowGroup);
-    rowGroup.appendChild(labelFirstName);
-    rowGroup.appendChild(inputFirstName);
-    formRowName.appendChild(rowGroup);
-    rowGroup.appendChild(labelLastName);
-    rowGroup.appendChild(inputLastName);
-
-    bodyForm.appendChild(formRowEmail);
-    formRowEmail.appendChild(rowGroupEmail);
-    rowGroupEmail.appendChild(labelEmail);
-    rowGroupEmail.appendChild(inputEmail);
-
-    bodyForm.appendChild(formRowAdr);
-    formRowAdr.appendChild(rowGroupAdr);
-    rowGroupAdr.appendChild(labelAddressFact);
-    rowGroupAdr.appendChild(inputAddressFact);
-
-    rowGroupAdr.appendChild(labelAddressLiv);
-    rowGroupAdr.appendChild(inputAddressLiv);
-
         //affichage du panier
     container.appendChild(containerColShip);
     containerColShip.appendChild(cardContainerShip);
@@ -296,6 +191,7 @@ function displayShip(){
         theadTH.textContent = "text";
         theadTR.appendChild(theadTH);
     }
+    cardBodyShip.appendChild(btnCommand);
 
                 // for(let i = 0; i < 4; i++){
                 //     let bodyTableColumn = document.createElement("td");

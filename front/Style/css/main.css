@@ -67,6 +67,7 @@ header .nav-item {
 .card-horizontal .card-body-product .card-select {
   display: flex;
   justify-content: space-between;
+  padding-top: 25px;
 }
 
 body {

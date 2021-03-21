@@ -21,7 +21,7 @@
 
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
     <header>
         <nav class="nav navbar-expand-lg navbar-light">
             <a href="#" class="navbar-brand">
@@ -42,6 +42,42 @@
     </header>
     <main>
         <div class="row" id="containerShip">
+            <div class="col-lg-6">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputLastName">Nom</label>
+                            <input id="inputLastName" class="form-control" type="text" placeholder="Doe">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputFirstName">Prénom</label>
+                            <input id="inputFirstName" class="form-control"  type="text" placeholder="John">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail">Email</label>
+                            <input id="inputEmail" class="form-control" type="email" placeholder="john.doe@domain.com">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPhone">Téléphone</label>
+                            <input id="inputPhone" class="form-control" type="email" placeholder="01.02.03.04.05">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="addrFact">Adresse de facturation</label>
+                            <textarea id="addrFact" class="form-control" placeholder=""></textarea>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="addrLiv">Adresse de livraison</label>
+                            <textarea id="addrLiv" class="form-control" placeholder=""></textarea>
+                        </div>
+
+
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
     <footer></footer>
