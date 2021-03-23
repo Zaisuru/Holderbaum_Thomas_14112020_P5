@@ -132,7 +132,7 @@ function displayProducts(teddy){
     document.getElementById("addShip").addEventListener("click", event => {
         localStorage.setItem('name', teddy.name);
         localStorage.setItem('price', teddy.price);
-        localStorage.setItem('colors', teddy.colors.value);
+        localStorage.setItem('colors', 'blue');
         localStorage.setItem('quantity', document.getElementById("qteSelectQte").value);
         event.preventDefault();
     })
@@ -157,7 +157,6 @@ function displayShip(){
     let tableThead = document.createElement("thead");
     let theadTR = document.createElement("tr");
     let tableTbody = document.createElement("tbody");
-    let tbodyTR = document.createElement("tr");
     let btnCommand = document.createElement("button");
 
 
@@ -190,6 +189,15 @@ function displayShip(){
         let theadTH = document.createElement("th");
         theadTH.textContent = "text";
         theadTR.appendChild(theadTH);
+    }
+    bodyTable.appendChild(tableTbody);
+    for ( let i=0; i < 5;i++){
+        let tbodyTR = document.createElement("tr");
+        let tbodyTD = document.createElement("td");
+        tbodyTD.textContent=localStorage.getItem('name');
+        tableTbody.appendChild(tbodyTR);
+        tbodyTR.appendChild(tbodyTD);
+
     }
     cardBodyShip.appendChild(btnCommand);
 
