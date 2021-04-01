@@ -21,7 +21,7 @@
 
 </head>
 <body>
-<div class="container-fluid">
+<div class="container">
     <header>
         <nav class="nav navbar-expand-lg navbar-light">
             <a href="#" class="navbar-brand">
@@ -42,55 +42,7 @@
 
     <main>
         <div class="row" id="containerShip">
-            <div class="col-lg-6">
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputLastName">Nom *</label>
-                            <input id="inputLastName" class="form-control" type="text" placeholder="Doe" required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputFirstName">Prénom *</label>
-                            <input id="inputFirstName" class="form-control"  type="text" placeholder="John">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="inputEmail">Email *</label>
-                            <input required id="inputEmail" class="form-control" type="email" placeholder="john.doe@domain.com">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="inputPhone">Téléphone</label>
-                            <input id="inputPhone" class="form-control" type="email" placeholder="02-35-66-55-55" pattern="[0-9]{2}[-][0-9]{2}[-][0-9]{2}[-][0-9]{2}[-][0-9]{2}[-]">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="addrFact">Adresse de facturation *</label>
-                            <input type="text" id="addrFact" class="form-control"  placeholder="1 avenue Champ Elysée">
-                            <label for ="codePostalFact">Votre code postal *</label>
-                            <input  id="codePostalFact" type="text" value="75000" class="form-control">
-                            <label for ="villeFact">Votre ville *</label>
-                            <input  id="villeFact" type="text" value="Paris" class="form-control" >
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="addrLiv">Adresse de livraison *</label>
-                            <input type="text" id="addrLiv" class="form-control"  placeholder="1 avenue Champ Elysée">
-                            <label for ="codePostalLiv">Votre code postal *</label>
-                            <input  id="codePostalLiv" type="text" placeholder="75000" class="form-control">
-                            <label for ="villeLiv">Votre ville *</label>
-                            <input  id="villeLiv" type="text" placeholder="Paris" class="form-control">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="checkbox" id="identAdr">
-                            <label for="identAdr">Adresse de livraison identique à l'adresse de facturation</label>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-lg-6">
+            <div class="col-12">
                 <div class="card">
                     <div class="card-title"></div>
                     <div class="card-body">
@@ -110,10 +62,51 @@
                             <p>Montant total de votre panier : <span id="sumShip">1</span> €</p>
                         </div>
 <!--                        onclick="window.location.href='confirmation.html'"-->
-                        <button class="btn btn-command" id="validCommand" >Commander !</button>
                     </div>
                 </div>
-            </div>
+            </div><div class="col-12">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputLastName">Nom *</label>
+                        <input id="inputLastName" class="form-control" type="text" placeholder="Doe" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputFirstName">Prénom *</label>
+                        <input id="inputFirstName" class="form-control"  type="text" placeholder="John" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail">Email *</label>
+                        <input required id="inputEmail" class="form-control" type="email" placeholder="john.doe@domain.com">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPhone">Téléphone</label>
+                        <input id="inputPhone" class="form-control" type="tel" placeholder="02-35-66-55-55">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="addrFact">Adresse de facturation *</label>
+                        <input type="text" id="addrFact" class="form-control"  placeholder="1 avenue Champ Elysée">
+                        <label for ="codePostalFact">Votre code postal *</label>
+                        <input  id="codePostalFact" type="text" value="75000" class="form-control">
+                        <label for ="villeFact">Votre ville *</label>
+                        <input  id="villeFact" type="text" value="Paris" class="form-control" >
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="addrLiv">Adresse de livraison *</label>
+                        <input type="text" id="addrLiv" class="form-control"  placeholder="1 avenue Champ Elysée">
+                        <label for ="codePostalLiv">Votre code postal *</label>
+                        <input  id="codePostalLiv" type="text" placeholder="75000" class="form-control">
+                        <label for ="villeLiv">Votre ville *</label>
+                        <input  id="villeLiv" type="text" placeholder="Paris" class="form-control">
+                    </div>
+                </div>
+                <button class="btn btn-command" id="validCommand">Commander !</button>
+            </form>
+        </div>
         </div>
     </main>
 

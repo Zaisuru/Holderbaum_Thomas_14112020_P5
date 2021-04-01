@@ -4,7 +4,7 @@ function displayTeddies(teddy){
     let container = document.getElementById("cardIndex-container");
 
     //déclaration du nombre dans le panier
-    let cartTeddies = JSON.parse(localStorage.getItem('cartTeddies'))
+    let cartTeddies = JSON.parse(localStorage.getItem('cartTeddies'));
     if(cartTeddies != null){
        document.getElementById("nbArtShip").textContent = cartTeddies.length;
     }
@@ -49,7 +49,8 @@ function displayProducts(teddy){
     //récupération du container parent
     let container = document.getElementById("productContainer");
 
-    let cartTeddies = JSON.parse(localStorage.getItem('cartTeddies'))
+    let cartTeddies = JSON.parse(localStorage.getItem('cartTeddies'));
+
     if(cartTeddies != null){
         document.getElementById("nbArtShip").textContent = cartTeddies.length;
     }
@@ -98,17 +99,36 @@ function displayProducts(teddy){
     // Récupération élément dans le local storage
     document.getElementById("addShip").addEventListener("click", event => {
         event.preventDefault();
+
         let selectedTeddy = {
             teddyName : teddy.name,
             teddyPrice : teddy.price,
             teddyColors : document.getElementById("teddiesColors").value,
             teddyQte : quantity,
         }
+
         let cartTeddies = JSON.parse(localStorage.getItem('cartTeddies')) || [];
 
         console.log(cartTeddies);
+        if(cartTeddies.length == 0){
+            cartTeddies.push(selectedTeddy);
+        }
+        else {
+            for(let i = 0; i < cartTeddies.length; i++){
+                if((cartTeddies[i].teddyName == selectedTeddy.teddyName) && (cartTeddies[i].teddyColors == selectedTeddy.teddyColors)){
+                    console.log("le nom est présent et la couleur aussi");
+                }
+                if ((cartTeddies[i].teddyName == selectedTeddy.teddyName) && (cartTeddies[i].teddyColors != selectedTeddy.teddyColors)){
+                    cartTeddies.push(selectedTeddy);
+                    console.log("Intégration");
+                }
+            }
+        }
 
-        cartTeddies.push(selectedTeddy);
+
+
+
+        //cartTeddies.push(selectedTeddy);
 
         localStorage.setItem("cartTeddies", JSON.stringify(cartTeddies));
     })
@@ -132,7 +152,7 @@ function displayShip(){
             let priceLine = document.createElement("td");
             let quantityLine = document.createElement("td");
             let totalLine = document.createElement("td");
-            let totalShip = cartTeddies[i].teddyQte * cartTeddies[i].teddyPrice;
+            var totalShip = cartTeddies[i].teddyQte * cartTeddies[i].teddyPrice;
 
             nameLine.textContent=cartTeddies[i].teddyName;
             colorsLine.textContent=cartTeddies[i].teddyColors;
@@ -146,17 +166,20 @@ function displayShip(){
             bodyTable.appendChild(priceLine);
             bodyTable.appendChild(quantityLine);
             bodyTable.appendChild(totalLine);
+
         }
     }
-
     //Somme du panier
+
 
     // Validation du panier
     document.getElementById("validCommand").addEventListener("click", event =>{
-        event.preventDefault();
-        // récupération du formulaireS
+      // event.preventDefault();
 
-        alert("salut");
+        // récupération du formulaires
+
+        //localStorage.clear();
+        //document.getElementById("validCommand").setAttribute("onclick","window.location.href='confirmation.html'")
 
     })
 }
