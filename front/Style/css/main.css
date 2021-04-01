@@ -7,10 +7,33 @@ header #logoOrinoco {
 header .nav-item {
   font-size: 20px;
   padding: 0 10px 0 10px;
+  text-align: center;
+}
+
+#bannerFab i {
+  padding: 15px;
+}
+
+#bannerNewsletter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bannerNewsletter #bannerEmail {
+  margin: 0 15px 0 15px;
+}
+
+#banner {
+  text-align: center;
+  background-color: white;
 }
 
 #cardIndex-Title {
   margin: 15px 0 15px 0;
+}
+
+.indexImg:hover {
+  opacity: 0.5;
 }
 
 #msgConfirmation {
@@ -18,6 +41,10 @@ header .nav-item {
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+#recapShipTotal {
+  float: right;
 }
 
 .btn-command {
@@ -30,6 +57,11 @@ header .nav-item {
   background: linear-gradient(#9A61DB, 80%, #D3874F);
   width: 60%;
   color: whitesmoke;
+}
+
+#btnDelShip {
+  border: none !important;
+  background: none !important;
 }
 
 #cardIndex-Title {

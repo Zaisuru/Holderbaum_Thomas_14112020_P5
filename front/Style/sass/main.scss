@@ -3,10 +3,12 @@
 
 // Déclaration des Layout
 @import "Layout/header";
+@import "Layout/footer";
 
 //Déclaration des Pages
 @import "Page/index";
 @import "Page/confirmation";
+@import "Page/ship";
 
 // Déclaration Components
 @import "Components/btn";

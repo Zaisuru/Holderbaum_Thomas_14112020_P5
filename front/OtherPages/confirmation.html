@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
+    <meta http-equiv="refresh" content="10; url=../index.html">
     <title>Orinoco - Accueil</title>
 
     <!-- Déclaration des CDNs -->
-    <link rel="preload" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
@@ -26,15 +27,16 @@
             <a href="#" class="navbar-brand">
                 <img src="../Picture/Orinoco_logo.PNG" alt="logo Orinoco" id="logoOrinoco">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
         </nav>
     </header>
     <main>
         <div id="msgConfirmation">
-            <h2>Merci de votre confiance <br>
+            <h2>Merci de votre confiance </h2>
+            <h2>Votre numéro de commande est le suivant : <span id="numFact">
+                <script>
+                    document.getElementById("numFact").textContent= "F-"+Math.floor(100000 + Math.random() * 100000);
+                </script>
+            </span><br>
             Votre commande est maintenant en cours de préparation</h2>
             <h2>A bientôt !</h2>
             <h3>Vous allez maitenant être redirigé vers l'accueil</h3>

@@ -1,0 +1,14 @@
+//Déclaration des variables
+@import "../Utils/variables";
+
+#bannerFab i{
+    padding: 15px;
+}
+#bannerNewsletter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  #bannerEmail{
+    margin: 0 15px 0 15px;
+  }
+}
