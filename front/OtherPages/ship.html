@@ -83,7 +83,7 @@
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPhone">Téléphone</label>
-                        <input id="inputPhone" class="form-control" type="tel" placeholder="02-35-66-55-55">
+                        <input id="inputPhone" class="form-control" type="tel" placeholder="02-35-66-55-55" pattern="{0-9} ^{a-z}">
                     </div>
                 </div>
                 <div class="form-row">
@@ -91,7 +91,7 @@
                         <label for="addrFact">Adresse de facturation *</label>
                         <input type="text" id="addrFact" class="form-control"  placeholder="1 avenue Champ Elysée">
                         <label for ="codePostalFact">Votre code postal *</label>
-                        <input  id="codePostalFact" type="text" value="75000" class="form-control">
+                        <input  id="codePostalFact" type="text" placeholder="75000" class="form-control">
                         <label for ="villeFact">Votre ville *</label>
                         <input  id="villeFact" type="text" value="Paris" class="form-control" >
                     </div>

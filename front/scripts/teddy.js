@@ -115,12 +115,18 @@ function displayProducts(teddy){
         }
         else {
             for(let i = 0; i < cartTeddies.length; i++){
-                if((cartTeddies[i].teddyName == selectedTeddy.teddyName) && (cartTeddies[i].teddyColors == selectedTeddy.teddyColors)){
-                    console.log("le nom est présent et la couleur aussi");
+                if(cartTeddies[i].teddyName == selectedTeddy.teddyName){
+                    console.log("le nom est présent ");
+                    if(cartTeddies[i].teddyColors == selectedTeddy.teddyColors){
+                        console.log("la couleur est présente");
+                    }
+                    else{
+                        cartTeddies.push(selectedTeddy);
+                    }
+
                 }
-                if ((cartTeddies[i].teddyName == selectedTeddy.teddyName) && (cartTeddies[i].teddyColors != selectedTeddy.teddyColors)){
-                    cartTeddies.push(selectedTeddy);
-                    console.log("Intégration");
+                else {
+                    console.log("le nom n'est pas present");
                 }
             }
         }
@@ -128,7 +134,7 @@ function displayProducts(teddy){
 
 
 
-        //cartTeddies.push(selectedTeddy);
+        cartTeddies.push(selectedTeddy);
 
         localStorage.setItem("cartTeddies", JSON.stringify(cartTeddies));
     })
@@ -170,6 +176,13 @@ function displayShip(){
         }
     }
     //Somme du panier
+    var totalPrice = [];
+    for(let i = 0; i < cartTeddies.length; i++ ){
+        var totalPriceTeddies = cartTeddies[i].teddyQte * cartTeddies[i].teddyPrice;
+        totalPrice.push(totalPriceTeddies);
+    }
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    document.getElementById("sumShip").textContent=totalPrice.reduce(reducer);
 
 
     // Validation du panier
