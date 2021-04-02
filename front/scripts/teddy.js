@@ -109,34 +109,13 @@ function displayProducts(teddy){
 
         let cartTeddies = JSON.parse(localStorage.getItem('cartTeddies')) || [];
 
-        console.log(cartTeddies);
         if(cartTeddies.length == 0){
             cartTeddies.push(selectedTeddy);
+            localStorage.setItem("cartTeddies", JSON.stringify(cartTeddies));
         }
-        else {
-            for(let i = 0; i < cartTeddies.length; i++){
-                if(cartTeddies[i].teddyName == selectedTeddy.teddyName){
-                    console.log("le nom est présent ");
-                    if(cartTeddies[i].teddyColors == selectedTeddy.teddyColors){
-                        console.log("la couleur est présente");
-                    }
-                    else{
-                        cartTeddies.push(selectedTeddy);
-                    }
+        console.log(cartTeddies);
+        //cartTeddies.push(selectedTeddy);
 
-                }
-                else {
-                    console.log("le nom n'est pas present");
-                }
-            }
-        }
-
-
-
-
-        cartTeddies.push(selectedTeddy);
-
-        localStorage.setItem("cartTeddies", JSON.stringify(cartTeddies));
     })
 }
 
