@@ -172,11 +172,63 @@ function displayShip(){
     // Validation du panier
     document.getElementById("validCommand").addEventListener("click", event =>{
       event.preventDefault();
+      let lastName = document.getElementById("inputLastName");
+      let firstName = document.getElementById("inputFirstName");
+      let mail = document.getElementById("inputEmail");
+      let phone = document.getElementById("inputPhone");
+      let adrFact = document.getElementById("addrFact");
+      let adrFactPostal = document.getElementById("codePostalFact");
+      let adrFacVille = document.getElementById("villeFact");
+      let adrLiv = document.getElementById("addrLiv");
+      let adrLivPostal = document.getElementById("codePostalLiv");
+      let adrLivVille = document.getElementById("villeLiv");
 
+      // Vérification du champ vide
+        if(lastName.value == ""){
+            alert("Le champ Nom est vide");
+            lastName.style.border = '2px solid red';
+        }
+        if(firstName.value == ""){
+            alert("Le champ Prénom est vide");
+            firstName.style.border = '2px solid red';
+        }
+        if(mail.value == ""){
+            alert("Le champ mail est vide");
+            mail.style.border = '2px solid red';
+        }
+        if(phone.value == ""){
+            alert("Le champ Téléphone est vide");
+            phone.style.border = '2px solid red';
+        }
+        if(adrFact.value== ""){
+            alert("Le champ Adresse facturation est vide");
+            adrFact.style.border = '2px solid red';
+        }
+        if(adrFactPostal.value == ""){
+            alert("Le champ Code Postal Facturation est vide");
+            adrFactPostal.style.border = '2px solid red';
+        }
+        if(adrFacVille.value == ""){
+            alert("Le champ Vile Facturation est vide");
+            adrFacVille.style.border = '2px solid red';
+        }
+        if(adrLiv.value == ""){
+            alert("Le champ Adresse Livraison est vide");
+            adrLiv.style.border = '2px solid red';
+        }
+        if(adrLivPostal.value == ""){
+            alert("Le champ Code Postal Livraison est vide");
+            adrLivPostal.style.border = '2px solid red';
+        }
+        if(adrLivVille.value == ""){
+            alert("Le champ Ville Livraison est vide");
+            adrLivVille.style.border = '2px solid red';
+        }
         // récupération du formulaires
             //check champ téléphone contient que des num
             const phoneValue = document.getElementById("inputPhone").value;
-            console.log(phoneValue);        //localStorage.clear();
+            console.log(phoneValue);
+            //localStorage.clear();
         //document.getElementById("validCommand").setAttribute("onclick","window.location.href='confirmation.html'")
 
     })
