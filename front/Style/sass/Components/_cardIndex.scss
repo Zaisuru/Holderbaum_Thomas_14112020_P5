@@ -2,15 +2,22 @@
   margin: 15px 0 15px 0;
 }
 
-.cardIndex{
-  width: 300px;
-  background: yellow;
-}
 .card{
-  margin: 25px 0 25px 0!important;
+  margin: 35px 0 35px 0!important;
   .indexImg{
     width: 100%;
     height: 250px;
     object-fit: cover;
+  }
+}
+.card-body{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  .card-body-title{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
   }
 }

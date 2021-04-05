@@ -1,7 +1,7 @@
 //Déclaration des variables
 @import "../Utils/variables";
 header{
-  margin: 0 0 100px 0;
+  margin: 20px 0 65px 0;
   #logoOrinoco{
     width: 40%;
   }
@@ -9,5 +9,8 @@ header{
     font-size: 20px;
     padding: 0 10px 0 10px;
     text-align: center;
+  }
+  #titleOrinoco{
+    display: none;
   }
 }

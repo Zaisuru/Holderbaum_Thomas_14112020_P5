@@ -1,5 +1,5 @@
 header {
-  margin: 0 0 100px 0;
+  margin: 20px 0 65px 0;
 }
 header #logoOrinoco {
   width: 40%;
@@ -9,23 +9,37 @@ header .nav-item {
   padding: 0 10px 0 10px;
   text-align: center;
 }
-
-#bannerFab i {
-  padding: 15px;
+header #titleOrinoco {
+  display: none;
 }
 
-#bannerNewsletter {
+footer {
+  margin-top: 50px;
+  background-color: #dab9ff;
+}
+footer #bannerFab {
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-#bannerNewsletter #bannerEmail {
-  margin: 0 15px 0 15px;
+footer #bannerFab i {
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  margin: 15px 10px 15px 10px;
+  background: linear-gradient(#D3874F, 50%, #9A61DB);
+}
+footer #bannerNewsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #banner {
   text-align: center;
-  background-color: white;
+  background-color: #dab9ff;
+  margin-bottom: 80px;
+  padding: 15px;
 }
 
 #cardIndex-Title {
@@ -49,8 +63,12 @@ header .nav-item {
 
 .btn-command {
   margin: 15px 0 15px 0;
-  background: linear-gradient(#9A61DB, 80%, #D3874F);
+  background-color: #ceb9ff;
   color: whitesmoke;
+}
+.btn-command:hover {
+  background-color: #9A61DB;
+  color: white;
 }
 
 .btn-confirmation {
@@ -59,22 +77,32 @@ header .nav-item {
   color: whitesmoke;
 }
 
+.btnImg {
+  background-color: #e6dcff;
+  width: 100%;
+}
+.btnImg:hover {
+  background-color: #9A61DB;
+}
+
 #btnDelShip {
   border: none !important;
   background: none !important;
+}
+
+.btnQte {
+  background-color: #e6dcff;
+}
+.btnQte:hover {
+  background-color: #9A61DB;
 }
 
 #cardIndex-Title {
   margin: 15px 0 15px 0;
 }
 
-.cardIndex {
-  width: 300px;
-  background: yellow;
-}
-
 .card {
-  margin: 25px 0 25px 0 !important;
+  margin: 35px 0 35px 0 !important;
 }
 .card .indexImg {
   width: 100%;
@@ -82,23 +110,38 @@ header .nav-item {
   object-fit: cover;
 }
 
-.card-horizontal {
+.card-body {
+  padding: 0;
+  margin: 0;
   display: flex;
+  flex-direction: column;
+}
+.card-body .card-body-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-horizontal {
+  display: flex !important;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse !important;
 }
 .card-horizontal .img-square-wrapper {
   width: 50%;
 }
 .card-horizontal .card-body-product {
   width: 30%;
+  margin: 5px 10px 0 0;
   display: flex !important;
   flex-direction: column;
   flex-wrap: wrap;
 }
 .card-horizontal .card-body-product .card-select {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   padding-top: 25px;
 }
 

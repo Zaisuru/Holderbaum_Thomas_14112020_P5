@@ -1,14 +1,23 @@
 //Déclaration des variables
 @import "../Utils/variables";
-
-#bannerFab i{
-    padding: 15px;
-}
-#bannerNewsletter{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  #bannerEmail{
-    margin: 0 15px 0 15px;
+footer {
+  margin-top: 50px;
+  background-color: #dab9ff;
+  #bannerFab{
+    display: flex;
+    justify-content: center;
+    i{
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+      margin: 15px 10px 15px 10px;
+      background: linear-gradient($primaryColor,50%, $secondaryColor);
+    }
+  }
+  #bannerNewsletter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

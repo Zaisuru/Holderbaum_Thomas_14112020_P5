@@ -14,9 +14,10 @@ function displayTeddies(teddy){
     let containerCard = document.createElement("div");
     let cardA=document.createElement("a");
     let cardImg=document.createElement("img");
+    let btnTed = document.createElement("button");
     let containerBody=document.createElement("div");
+    let containerTitle=document.createElement("div");
     let bodyTitle=document.createElement("h3");
-    let bodyDescription=document.createElement("p");
     let bodyPrice=document.createElement("h4");
 
     // Ajout des classes css
@@ -26,22 +27,27 @@ function displayTeddies(teddy){
     cardImg.setAttribute("src",teddy.imageUrl);
     cardImg.setAttribute("alt","Image ourson en peluche fait main");
     cardImg.setAttribute("class", "indexImg");
+    btnTed.setAttribute("class", "btn btnImg");
     containerBody.setAttribute("class", "card-body");
+    containerTitle.setAttribute("class", "card-body-title");
 
     //Ajout des éléments provenant de l'API
     bodyTitle.textContent = teddy.name;
-    bodyDescription.textContent=teddy.description;
     bodyPrice.textContent=teddy.price +' €';
+
+    //Ajout des autres élèments
+    btnTed.textContent="En savoir plus"
 
     //Affichage des éléments
     container.appendChild(containerCol);
     containerCol.appendChild(containerCard);
-    containerCard.appendChild(cardA);
-    cardA.appendChild(cardImg);
+    containerCard.appendChild(cardImg);
     containerCol.appendChild(containerBody);
-    containerBody.appendChild(bodyTitle);
-    containerBody.appendChild(bodyDescription);
-    containerBody.appendChild(bodyPrice);
+    containerBody.appendChild(containerTitle);
+    containerTitle.appendChild(bodyTitle);
+    containerTitle.appendChild(bodyPrice);
+    containerBody.appendChild(cardA);
+    cardA.appendChild(btnTed);
 }
 
 // affichage teddy spécifique page produit
@@ -163,14 +169,14 @@ function displayShip(){
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     document.getElementById("sumShip").textContent=totalPrice.reduce(reducer);
 
-
     // Validation du panier
     document.getElementById("validCommand").addEventListener("click", event =>{
-      // event.preventDefault();
+      event.preventDefault();
 
         // récupération du formulaires
-
-        //localStorage.clear();
+            //check champ téléphone contient que des num
+            const phoneValue = document.getElementById("inputPhone").value;
+            console.log(phoneValue);        //localStorage.clear();
         //document.getElementById("validCommand").setAttribute("onclick","window.location.href='confirmation.html'")
 
     })

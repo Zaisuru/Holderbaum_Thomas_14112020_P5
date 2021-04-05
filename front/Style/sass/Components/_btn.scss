@@ -4,15 +4,33 @@
 
 .btn-command{
   margin: 15px 0 15px 0;
-  background: linear-gradient($secondaryColor,80%, $primaryColor);
+  background-color: #ceb9ff;
+  //background: linear-gradient($secondaryColor,80%, $primaryColor);
   color: whitesmoke;
+  &:hover{
+    background-color: #9A61DB;
+    color: white;
+  }
 }
 .btn-confirmation{
   background: linear-gradient($secondaryColor,80%, $primaryColor);
   width: 60%;
   color: whitesmoke;
 }
+.btnImg{
+  background-color: #e6dcff;
+  width: 100%;
+  &:hover{
+    background-color: #9A61DB;
+  }
+}
 #btnDelShip{
   border: none!important;
   background:none!important;
+}
+.btnQte{
+  background-color: #e6dcff;
+  &:hover{
+    background-color: #9A61DB;
+  }
 }

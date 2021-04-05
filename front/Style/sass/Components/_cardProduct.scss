@@ -3,20 +3,23 @@
 @import "../Utils/variables";
 
 .card-horizontal{
-  display: flex;
+  display: flex!important;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse!important;
   .img-square-wrapper{
     width: 50%;
   }
   .card-body-product{
     width: 30%;
+    margin: 5px 10px 0 0;
     display: flex!important;
     flex-direction: column;
     flex-wrap: wrap;
     .card-select{
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
+      align-items: center;
       padding-top: 25px;
     }
 

@@ -26,6 +26,7 @@
         <nav class="nav navbar-expand-lg navbar-light">
             <a href="#" class="navbar-brand">
                 <img src="Picture/Orinoco_logo.PNG" alt="logo Orinoco" id="logoOrinoco">
+                <h1 id="titleOrinoco">Orinoco</h1>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -43,24 +44,33 @@
     </header>
     <main>
         <div id="banner">
-            <h1>Nos ourson sont réalisée à la main <br>
-            Commandez en un maintenant pour avoir votre ourson unique au monde</h1>
+            <h2>Nos ourson sont réalisée à la main </h2>
+            <h2>Commandez en un maintenant pour avoir votre ourson unique au monde</h2>
         </div>
-        <h2 id="cardIndex-Title">Notre sélection</h2>
+        <h2 id="cardIndex-Title">Notre sélection d'ourson</h2>
         <div class="row" id="cardIndex-container">
+            <!-- Contenu tedyy JS -->
         </div>
     </main>
     <footer class="text-center">
         <div id="bannerFab">
-            <i class="fab fa-facebook-f fa-3x"></i>
-            <i class="fab fa-instagram fa-3x"></i>
+            <div class="bannerNetwork>"><a href="#"><i class="fab fa-facebook-f fa-2x"></i></a></div>
+            <div class="bannerNetwork>"><a href="#"><i class="fab fa-instagram fa-2x"></i></a></div>
         </div>
         <div id="bannerNewsletter">
-            <h3>Abonnez-vous à notre newsletter</h3>
-            <input type="email" id="bannerEmail">
+            <h4>Abonnez-vous à notre newsletter</h4>
+            <form>
+                <div class="form-row">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">@</div>
+                        </div>
+                        <input type="text" class="form-control" id="emailNewsletter" placeholder="john.doe@contoso.fr">
+                    </div>
+                </div>
+            </form>
+            <button class="btn btn-command">Valider</button>
         </div>
-        <button class="btn btn-command">Valider</button>
-
     </footer>
 </div>
 
