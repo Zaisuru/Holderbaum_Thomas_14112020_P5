@@ -174,10 +174,12 @@ function displayShip(){
     // Validation du panier
     document.getElementById("validCommand").addEventListener("submit", event =>{
         //check champ mail a bien un @
+
             //check champ téléphone contient que des num
             const phoneValue = document.getElementById("inputPhone").value;
             console.log(phoneValue);
             //localStorage.clear();
-        //document.getElementById("validCommand").setAttribute("onclick","window.location.href='confirmation.html'")
+
+        document.getElementById("validCommand").setAttribute("onclick","window.location.href='confirmation.html'")
     })
 }
