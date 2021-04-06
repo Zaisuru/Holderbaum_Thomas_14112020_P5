@@ -60,6 +60,7 @@ function displayProducts(teddy){
     if(cartTeddies != null){
         document.getElementById("nbArtShip").textContent = cartTeddies.length;
     }
+
     // Déclaration des éléments
     let imgTeddy = document.getElementById("imgTeddies");
     let tedName = document.getElementById("teddiesName");
@@ -77,6 +78,7 @@ function displayProducts(teddy){
     tedName.textContent = teddy.name;
     tedDesc.textContent = teddy.description;
     tedPrice.textContent = teddy.price + " €";
+
     //Récupération des autres éléments
     let quantity = document.getElementById('qteSelectQte').textContent;
 
@@ -104,7 +106,7 @@ function displayProducts(teddy){
 
     // Récupération élément dans le local storage
     document.getElementById("addShip").addEventListener("click", event => {
-        event.preventDefault();
+        //event.preventDefault();
 
         let selectedTeddy = {
             teddyName : teddy.name,
@@ -170,64 +172,13 @@ function displayShip(){
     document.getElementById("sumShip").textContent=totalPrice.reduce(reducer);
 
     // Validation du panier
-    document.getElementById("validCommand").addEventListener("click", event =>{
-      event.preventDefault();
-      let lastName = document.getElementById("inputLastName");
-      let firstName = document.getElementById("inputFirstName");
-      let mail = document.getElementById("inputEmail");
-      let phone = document.getElementById("inputPhone");
-      let adrFact = document.getElementById("addrFact");
-      let adrFactPostal = document.getElementById("codePostalFact");
-      let adrFacVille = document.getElementById("villeFact");
-      let adrLiv = document.getElementById("addrLiv");
-      let adrLivPostal = document.getElementById("codePostalLiv");
-      let adrLivVille = document.getElementById("villeLiv");
+    document.getElementById("validCommand").addEventListener("submit", event =>{
+        //check champ mail a bien un @
 
-      // Vérification du champ vide
-        if(lastName.value == ""){
-            alert("Le champ Nom est vide");
-            lastName.style.border = '2px solid red';
-        }
-        if(firstName.value == ""){
-            alert("Le champ Prénom est vide");
-            firstName.style.border = '2px solid red';
-        }
-        if(mail.value == ""){
-            alert("Le champ mail est vide");
-            mail.style.border = '2px solid red';
-        }
-        if(phone.value == ""){
-            alert("Le champ Téléphone est vide");
-            phone.style.border = '2px solid red';
-        }
-        if(adrFact.value== ""){
-            alert("Le champ Adresse facturation est vide");
-            adrFact.style.border = '2px solid red';
-        }
-        if(adrFactPostal.value == ""){
-            alert("Le champ Code Postal Facturation est vide");
-            adrFactPostal.style.border = '2px solid red';
-        }
-        if(adrFacVille.value == ""){
-            alert("Le champ Vile Facturation est vide");
-            adrFacVille.style.border = '2px solid red';
-        }
-        if(adrLiv.value == ""){
-            alert("Le champ Adresse Livraison est vide");
-            adrLiv.style.border = '2px solid red';
-        }
-        if(adrLivPostal.value == ""){
-            alert("Le champ Code Postal Livraison est vide");
-            adrLivPostal.style.border = '2px solid red';
-        }
-        if(adrLivVille.value == ""){
-            alert("Le champ Ville Livraison est vide");
-            adrLivVille.style.border = '2px solid red';
-        }
-        // récupération du formulaires
             //check champ téléphone contient que des num
             const phoneValue = document.getElementById("inputPhone").value;
             console.log(phoneValue);
+            alert("fofer le pd")
             //localStorage.clear();
         //document.getElementById("validCommand").setAttribute("onclick","window.location.href='confirmation.html'")
 

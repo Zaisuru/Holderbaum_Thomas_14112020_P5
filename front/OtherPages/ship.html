@@ -59,7 +59,7 @@
                             <tbody id="tableBody"></tbody>
                         </table>
                         <div id="recapShipTotal">
-                            <p>Montant total de votre panier : <span id="sumShip">1</span> €</p>
+                            <p>Montant total de votre panier : <span id="sumShip">0</span> €</p>
                         </div>
 <!--                        onclick="window.location.href='confirmation.html'"-->
                     </div>
@@ -79,7 +79,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputEmail">Email *</label>
-                        <input required id="inputEmail" class="form-control" type="email" placeholder="john.doe@domain.com">
+                        <input required id="inputEmail" class="form-control" type="email" placeholder="john.doe@domain.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPhone">Téléphone *</label>
@@ -93,7 +93,7 @@
                         <label for ="codePostalFact">Votre code postal *</label>
                         <input  id="codePostalFact" type="text" placeholder="75000" class="form-control">
                         <label for ="villeFact">Votre ville *</label>
-                        <input  id="villeFact" type="text" value="Paris" class="form-control" >
+                        <input  id="villeFact" type="text" placeholder="Paris" class="form-control" >
                     </div>
                     <div class="form-group col-md-6">
                         <label for="addrLiv">Adresse de livraison *</label>
