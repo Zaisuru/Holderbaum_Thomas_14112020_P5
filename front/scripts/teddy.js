@@ -120,6 +120,12 @@ function displayProducts(teddy){
             localStorage.setItem("cartTeddies", JSON.stringify(cartTeddies));
         }
         console.log(cartTeddies);
+        for (let i = 0; i < cartTeddies.length; i++){
+            const findIndexTed = cartTeddies.findIndex(element => element.teddyName === "Norbert");
+            console.log(findIndexTed);
+            console.log(cartTeddies[findIndexTed]);
+        }
+
         //cartTeddies.push(selectedTeddy);
 
     })
@@ -171,13 +177,7 @@ function displayShip(){
 
     // Validation du panier
     document.getElementById("validCommand").addEventListener("submit", event =>{
-        //check champ mail a bien un @
-
-            //check champ téléphone contient que des num
-            const phoneValue = document.getElementById("inputPhone").value;
-            console.log(phoneValue);
-            //localStorage.clear();
-
+        localStorage.clear();
         document.getElementById("validCommand").setAttribute("onclick","window.location.href='confirmation.html'")
     })
 }
