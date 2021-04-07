@@ -12,6 +12,16 @@
     color: white;
   }
 }
+.btn-command-ship{
+  color: whitesmoke;
+  background-color: #ceb9ff;
+  min-width: 30%;
+  max-width: 30%;
+  &:hover{
+    background-color: #9A61DB;
+    color: white;
+  }
+}
 .btn-confirmation{
   background: linear-gradient($secondaryColor,80%, $primaryColor);
   width: 60%;

@@ -5,16 +5,16 @@
 .card-horizontal{
   display: flex!important;
   justify-content: center;
-  flex-wrap: wrap-reverse!important;
+  flex-wrap: wrap!important;
   .img-square-wrapper{
     width: 50%;
   }
   .card-body-product{
     width: 30%;
+    padding: 10px;
     margin: 5px 10px 0 0;
     display: flex!important;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-wrap: wrap!important;
     .card-select{
       display: flex;
       flex-wrap: wrap;

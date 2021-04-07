@@ -15,7 +15,7 @@ header #titleOrinoco {
 
 footer {
   margin-top: 50px;
-  background-color: #dab9ff;
+  background-color: white;
 }
 footer #bannerFab {
   display: flex;
@@ -37,7 +37,7 @@ footer #bannerNewsletter {
 
 #banner {
   text-align: center;
-  background-color: #dab9ff;
+  background-color: white;
   margin-bottom: 80px;
   padding: 15px;
 }
@@ -57,8 +57,33 @@ footer #bannerNewsletter {
   text-align: center;
 }
 
+#containerBtnCommand {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #recapShipTotal {
+  margin-right: 10px;
   float: right;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#sumShip {
+  font-weight: bold;
+}
+
+#formShip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#containerBtnCommand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-command {
@@ -67,6 +92,17 @@ footer #bannerNewsletter {
   color: whitesmoke;
 }
 .btn-command:hover {
+  background-color: #9A61DB;
+  color: white;
+}
+
+.btn-command-ship {
+  color: whitesmoke;
+  background-color: #ceb9ff;
+  min-width: 30%;
+  max-width: 30%;
+}
+.btn-command-ship:hover {
   background-color: #9A61DB;
   color: white;
 }
@@ -125,17 +161,17 @@ footer #bannerNewsletter {
 .card-horizontal {
   display: flex !important;
   justify-content: center;
-  flex-wrap: wrap-reverse !important;
+  flex-wrap: wrap !important;
 }
 .card-horizontal .img-square-wrapper {
   width: 50%;
 }
 .card-horizontal .card-body-product {
   width: 30%;
+  padding: 10px;
   margin: 5px 10px 0 0;
   display: flex !important;
-  flex-direction: column;
-  flex-wrap: wrap;
+  flex-wrap: wrap !important;
 }
 .card-horizontal .card-body-product .card-select {
   display: flex;
@@ -145,6 +181,26 @@ footer #bannerNewsletter {
   padding-top: 25px;
 }
 
+@media screen and (max-width: 770px) {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav .navbar-brand {
+    width: 50%;
+  }
+
+  .card-horizontal {
+    display: flex !important;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .card-horizontal .card-body-product {
+    width: 100%;
+    padding: 5px;
+  }
+}
 body {
   background-color: #F3E9F1;
 }

@@ -53,8 +53,6 @@ function displayTeddies(teddy){
 // affichage teddy spécifique page produit
 function displayProducts(teddy){
     //récupération du container parent
-    let container = document.getElementById("productContainer");
-
     let cartTeddies = JSON.parse(localStorage.getItem('cartTeddies'));
 
     if(cartTeddies != null){

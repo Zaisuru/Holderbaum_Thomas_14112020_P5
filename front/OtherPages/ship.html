@@ -42,7 +42,7 @@
 
     <main>
         <div class="row" id="containerShip">
-            <div class="col-12">
+            <div class="col-12" id="containerTableShip">
                 <div class="card">
                     <div class="card-title"></div>
                     <div class="card-body">
@@ -59,13 +59,12 @@
                             <tbody id="tableBody"></tbody>
                         </table>
                         <div id="recapShipTotal">
-                            <p>Montant total de votre panier : <span id="sumShip">0</span> €</p>
+                            <p>Montant total de votre panier : <span id="sumShip">0</span> <b>€</b></p>
                         </div>
 <!--                        onclick="window.location.href='confirmation.html'"-->
                     </div>
                 </div>
-            </div><div class="col-12">
-            <form>
+            <form id="formShip">
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="inputLastName">Nom *</label>
@@ -104,7 +103,9 @@
                         <input  id="villeLiv" type="text" placeholder="Paris" class="form-control">
                     </div>
                 </div>
-                <button class="btn btn-command" id="validCommand">Commander !</button>
+                <div id="containerBtnCommand">
+                    <button class="btn btn-command-ship" id="validCommand">Commander !</button>
+                </div>
             </form>
         </div>
         </div>

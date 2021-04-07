@@ -1,0 +1,26 @@
+// Déclaration variables
+
+@import "../Utils/variables";
+
+@media screen and (max-width: 770px){
+  //navbar
+  .nav{
+    display: flex;
+    justify-content: space-between;
+    .navbar-brand{
+      width: 50%;
+    }
+  }
+
+
+  .card-horizontal{
+    display: flex!important;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    .card-body-product{
+      width: 100%;
+      padding: 5px;
+    }
+  }
+}

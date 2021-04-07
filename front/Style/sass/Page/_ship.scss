@@ -1,7 +1,27 @@
 // Déclaration des variables
 
 @import "../Utils/variables";
-
-#recapShipTotal{
-  float: right;
+#containerBtnCommand{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+  #recapShipTotal{
+    margin-right: 10px;
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+  }
+#sumShip{
+  font-weight: bold;
+}
+#formShip{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#containerBtnCommand{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
