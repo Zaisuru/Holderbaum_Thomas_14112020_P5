@@ -104,29 +104,23 @@ function displayProducts(teddy){
 
     // Récupération élément dans le local storage
     document.getElementById("addShip").addEventListener("click", event => {
-        //event.preventDefault();
 
         let selectedTeddy = {
             teddyName : teddy.name,
             teddyPrice : teddy.price,
             teddyColors : document.getElementById("teddiesColors").value,
-            teddyQte : quantity,
+            teddyQte : parseInt(quantity),
         }
 
         let cartTeddies = JSON.parse(localStorage.getItem('cartTeddies')) || [];
+            const findIndexTed = cartTeddies.findIndex((element => element.teddyName === selectedTeddy.teddyName) && (element => element.teddyColors === selectedTeddy.teddyColors));
 
-        if(cartTeddies.length == 0){
-            cartTeddies.push(selectedTeddy);
-            localStorage.setItem("cartTeddies", JSON.stringify(cartTeddies));
-        }
-        console.log(cartTeddies);
-        for (let i = 0; i < cartTeddies.length; i++){
-            const findIndexTed = cartTeddies.findIndex(element => element.teddyName === "Norbert");
-            console.log(findIndexTed);
-            console.log(cartTeddies[findIndexTed]);
-        }
-
-        //cartTeddies.push(selectedTeddy);
+            if (findIndexTed == -1) {
+                cartTeddies.push(selectedTeddy);
+            }else{
+                cartTeddies[findIndexTed].teddyQte += selectedTeddy.teddyQte;
+            }
+        localStorage.setItem("cartTeddies", JSON.stringify(cartTeddies));
 
     })
 }
