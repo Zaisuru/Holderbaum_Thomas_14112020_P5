@@ -8,17 +8,17 @@
   //background: linear-gradient($secondaryColor,80%, $primaryColor);
   color: whitesmoke;
   &:hover{
-    background-color: #9A61DB;
+    background-color: $backgoundBtnHover;
     color: white;
   }
 }
 .btn-command-ship{
   color: whitesmoke;
   background-color: #ceb9ff;
-  min-width: 30%;
-  max-width: 30%;
+  min-width: 40%;
+  max-width: 40%;
   &:hover{
-    background-color: #9A61DB;
+    background-color: $backgoundBtnHover;
     color: white;
   }
 }
@@ -28,10 +28,10 @@
   color: whitesmoke;
 }
 .btnImg{
-  background-color: #e6dcff;
+  background-color: $backgroundBtn;
   width: 100%;
   &:hover{
-    background-color: #9A61DB;
+    background-color: $backgoundBtnHover;
   }
 }
 #btnDelShip{
@@ -39,8 +39,15 @@
   background:none!important;
 }
 .btnQte{
-  background-color: #e6dcff;
+  background-color: $backgroundBtn;
   &:hover{
-    background-color: #9A61DB;
+    background-color: $backgoundBtnHover;
+  }
+}
+
+#btnReturn{
+  background-color: $backgroundBtn;
+  &:hover{
+    background-color: $backgoundBtnHover;
   }
 }

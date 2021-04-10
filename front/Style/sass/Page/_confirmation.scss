@@ -5,6 +5,18 @@
 #msgConfirmation{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  #msgConfirmation-Body-Recap{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #msgConfirmation-Footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    #btnReturn{
+      min-width: 50%;
+    }
+  }
 }

@@ -53,13 +53,39 @@ footer #bannerNewsletter {
 #msgConfirmation {
   display: flex;
   flex-direction: column;
+}
+#msgConfirmation #msgConfirmation-Body-Recap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#msgConfirmation #msgConfirmation-Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  text-align: center;
+}
+#msgConfirmation #msgConfirmation-Footer #btnReturn {
+  min-width: 50%;
+}
+
+#containerTableShip {
+  background: none;
+}
+#containerTableShip #bodyTableShip {
+  background: none;
+  border: none;
+}
+#containerTableShip #bodyTableShip #tableShip {
+  border: 1px solid black;
+}
+#containerTableShip #bodyTableShip #tableShip #tableBody {
+  background: white;
 }
 
 #containerBtnCommand {
   display: flex;
-  flex-direction: column;
+  align-content: center;
   justify-content: center;
 }
 
@@ -79,11 +105,13 @@ footer #bannerNewsletter {
   flex-direction: column;
   justify-content: center;
 }
-
-#containerBtnCommand {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#formShip .containerAddr {
+  padding: 5px;
+  justify-content: space-between;
+}
+#formShip .containerAddr .bodyAddr {
+  padding: 20px;
+  background: white;
 }
 
 .btn-command {
@@ -99,8 +127,8 @@ footer #bannerNewsletter {
 .btn-command-ship {
   color: whitesmoke;
   background-color: #ceb9ff;
-  min-width: 30%;
-  max-width: 30%;
+  min-width: 40%;
+  max-width: 40%;
 }
 .btn-command-ship:hover {
   background-color: #9A61DB;
@@ -130,6 +158,13 @@ footer #bannerNewsletter {
   background-color: #e6dcff;
 }
 .btnQte:hover {
+  background-color: #9A61DB;
+}
+
+#btnReturn {
+  background-color: #e6dcff;
+}
+#btnReturn:hover {
   background-color: #9A61DB;
 }
 

@@ -1,9 +1,22 @@
 // Déclaration des variables
 
 @import "../Utils/variables";
+#containerTableShip{
+  background: none;
+  #bodyTableShip{
+    background: none;
+    border: none;
+    #tableShip{
+      border: 1px solid black;
+      #tableBody{
+      background: white;
+      }
+    }
+  }
+}
 #containerBtnCommand{
   display: flex;
-  flex-direction: column;
+  align-content: center;
   justify-content: center;
 }
   #recapShipTotal{
@@ -19,9 +32,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-#containerBtnCommand{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .containerAddr{
+    padding: 5px;
+    justify-content: space-between;
+    .bodyAddr{
+      padding: 20px;
+      background: white;
+    }
+  }
 }
