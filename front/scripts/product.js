@@ -2,9 +2,6 @@
 let params = new URL(document.location).searchParams;
 let idProduit = params.get('id');
 
-//let adr =http://localhost:3000/api/teddies/
-    //https://ab-p5-api.herokuapp.com/api/teddies
-
 //Connection à l'API des teddies
 onload = function(){
     fetch("http://localhost:3000/api/teddies/" + idProduit)
@@ -12,6 +9,7 @@ onload = function(){
         .then((teddy) =>{
                 displayProducts(teddy);
         })
+        .catch(error => alert('Une erreur est survenue, réessayer plus tard'))
 }
 
 // affichage teddy spécifique page produit

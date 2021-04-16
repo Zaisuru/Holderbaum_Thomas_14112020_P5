@@ -9,5 +9,6 @@ onload = function(){
                 displayTeddies(teddy);
             }
         })
+        .catch(error => alert('Connexion impossible, réessayer plus tard'))
 }
 

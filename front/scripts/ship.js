@@ -56,6 +56,7 @@ function displayShip(){
 
     // Validation du panier
     document.getElementById("validCommand").addEventListener("submit", event =>{
-        document.getElementById("validCommand").setAttribute("onclick","window.location.href='confirmation.html'")
+        event.preventDefault();
+        window.location.href='../OtherPages/confirmation.html';
     })
 }

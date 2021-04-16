@@ -9,7 +9,7 @@ function displayConfirmation(){
     let cartTeddies = JSON.parse(localStorage.getItem('cartTeddies'));
 
     //Creation N° de commande
-    document.getElementById("numcommand").textContent = "F-"+Math.floor(100000 + Math.random() * 100000)
+    document.getElementById("numcommand").textContent = "F-"+Math.floor(100000 + Math.random() * 100000);
 
     //Recuperation de la somme du panier
     var totalPrice = [];
@@ -34,13 +34,13 @@ function displayConfirmation(){
 
     //Affichage des elements
     container.appendChild(numberTed);
-    container.appendChild(totalTed)
-
+    container.appendChild(totalTed);
 
     //Retour a la page d'acceuil & Suppr du localStorage
-    document.getElementById("btnReturn").addEventListener("click", event =>{
-        event.preventDefault();
-        localStorage.clear();
-        document.getElementById("btnReturn").setAttribute("onclick","window.location.href='../index.html'")
+     document.getElementById("btnReturn").addEventListener("click", event =>{
+         event.preventDefault();
+         window.location.href = '../index.html';
+         localStorage.clear();
+    //
     })
 }
