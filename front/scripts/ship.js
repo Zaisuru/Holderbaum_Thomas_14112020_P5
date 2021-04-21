@@ -55,7 +55,7 @@ function displayShip(){
     document.getElementById("sumShip").textContent=totalPrice.reduce(reducer);
 
     // Validation du panier
-    document.getElementById("validCommand").addEventListener("submit", event =>{
+    document.getElementById("validCommand").addEventListener("click", event =>{
         event.preventDefault();
         window.location.href='../OtherPages/confirmation.html';
     })
