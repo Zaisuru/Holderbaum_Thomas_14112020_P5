@@ -60,7 +60,5 @@ function displayShip(){
 // Validation du panier
 function validForm(){
     event.preventDefault();
-    alert('Salut');
     window.location.href='../OtherPages/confirmation.html';
-    alert('ENFIN');
 }
