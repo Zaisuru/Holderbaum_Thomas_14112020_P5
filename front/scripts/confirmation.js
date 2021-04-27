@@ -9,12 +9,8 @@ onload = function(teddy){
 function displayConfirmation(teddy){
     let cartTeddies = JSON.parse(localStorage.getItem('cartTeddies'));
 
-    let orderConfirmation = (JSON.parse(localStorage.getItem("orderConfirmation")) || []);
-
-    //Creation N° de commande
-    document.getElementById("numcommand").textContent = orderConfirmation.orderId;
-    console.log(orderConfirmation);
-    console.log(orderConfirmation.orderId)
+    // //Creation N° de commande
+     document.getElementById("numcommand").textContent = JSON.parse(localStorage.orderId);
 
     //Recuperation de la somme du panier
     var totalPrice = [];
