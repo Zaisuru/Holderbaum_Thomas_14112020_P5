@@ -54,11 +54,26 @@ function displayShip(){
     const reducer = (accumulator, currentValue) => accumulator + currentValue;
     document.getElementById("sumShip").textContent=totalPrice.reduce(reducer);
 
-
 }
+function addProductApi(){
+    let cartTeddies = JSON.parse(localStorage.getItem('cartTeddies'));
 
+    let products = [];
+
+    let contact = {
+        firstName : document.getElementById("inputFirstName").value,
+        lastName : document.getElementById("inputLastName").value,
+        address:document.getElementById("addrFact").value,
+        city :document.getElementById("villeFact").value,
+        email :document.getElementById("inputEmail").value
+    }
+
+    cartTeddies.forEach(element => {
+        products.push(element.teddyId)
+    })
+}
 // Validation du panier
 function validForm(){
     event.preventDefault();
-    window.location.href='../OtherPages/confirmation.html';
+    addProductApi();
 }

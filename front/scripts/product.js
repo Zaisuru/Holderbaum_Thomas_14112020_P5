@@ -68,6 +68,7 @@ function displayProducts(teddy){
     document.getElementById("addShip").addEventListener("click", event => {
 
         let selectedTeddy = {
+            teddyId : idProduit,
             teddyName : teddy.name,
             teddyPrice : teddy.price,
             teddyColors : document.getElementById("teddiesColors").value,
@@ -83,7 +84,6 @@ function displayProducts(teddy){
             cartTeddies[findIndexTed].teddyQte += selectedTeddy.teddyQte;
         }
         localStorage.setItem("cartTeddies", JSON.stringify(cartTeddies));
-
     })
 }
 

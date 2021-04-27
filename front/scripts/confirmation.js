@@ -1,15 +1,20 @@
-onload = function(){
-    fetch("http://localhost:3000/api/teddies")
+onload = function(teddy){
+    fetch("http://localhost:3000/api/teddies/order")
         .then((response) =>  {return response.json() })
         .then((teddy) =>{
-            displayConfirmation(teddy);
+            displayConfirmation(teddy)
         })
+
 }
-function displayConfirmation(){
+function displayConfirmation(teddy){
     let cartTeddies = JSON.parse(localStorage.getItem('cartTeddies'));
 
+    let orderConfirmation = (JSON.parse(localStorage.getItem("orderConfirmation")) || []);
+
     //Creation N° de commande
-    document.getElementById("numcommand").textContent = "F-"+Math.floor(100000 + Math.random() * 100000);
+    document.getElementById("numcommand").textContent = orderConfirmation.orderId;
+    console.log(orderConfirmation);
+    console.log(orderConfirmation.orderId)
 
     //Recuperation de la somme du panier
     var totalPrice = [];
@@ -19,9 +24,6 @@ function displayConfirmation(){
          totalPrice.push(totalPriceTeddies);
      }
      const reducer = (accumulator, currentValue) => accumulator + currentValue;
-     console.log(totalPrice.reduce(reducer));
-
-    console.log(cartTeddies.length);
 
     //Creation des elements
     let container = document.getElementById("msgConfirmation-Body-Recap");
@@ -41,6 +43,5 @@ function displayConfirmation(){
          event.preventDefault();
          window.location.href = '../index.html';
          localStorage.clear();
-    //
     })
 }
